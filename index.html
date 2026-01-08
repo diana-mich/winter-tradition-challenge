@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Birthstone&family=Imperial+Script&family=Praise&family=Shrikhand&display=swap"
+      rel="stylesheet"
+    />
+    <title>Winter Tradition: Baking Cookies</title>
+    <style>
+      body {
+        background-color: antiquewhite;
+      }
+
+      .main-page {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/203/original/bob-canning-r53rNKb_7s8-unsplash.jpg?1767724154");
+        background-position: center;
+        background-size: cover;
+
+        border-radius: 15px;
+        margin: 0px;
+        padding: 30px 20px 20px 20px;
+      }
+
+      h2 {
+        text-align: center;
+        padding: 0px;
+        margin-bottom: 0px;
+        font-family: "Imperial Script", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 220%;
+      }
+
+      h1 {
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 50px;
+        font-family: "Shrikhand", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 230%;
+      }
+
+      .intro {
+        align-content: right;
+        align-items: right;
+        border-radius: 8px;
+        background-color: rgb(240, 248, 255, 0.5);
+        font-weight: 400;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        padding: 10px 30px;
+        margin: 0px 30px 20px 60px;
+      }
+
+      .set-btn-main {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .btn-main {
+        padding: 3px 8px;
+        border-radius: 15px;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+      }
+
+      .btn-main:hover {
+        background-color: lightgray;
+        transition: all 150ms ease-in-out;
+      }
+
+      .content {
+        display: flex;
+        margin: 20px 0px;
+      }
+
+      .cookie {
+        display: block;
+        padding: 12px 20px;
+        cursor: pointer;
+        border-radius: 4px;
+        border: 1px solid rgba(98, 96, 96, 0.5);
+      }
+      .cookie:hover {
+        background-color: lightgray;
+        transition: all 150ms ease-in-out;
+        transform: translateX(10px);
+      }
+
+      .sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        margin-left: 20px;
+        padding: 0px 10px;
+      }
+
+      .display-area {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid rgba(98, 96, 96, 0.5);
+        border-radius: 8px;
+        padding: 20px 0px;
+        margin: 0px 30px;
+      }
+
+      .display-img {
+        width: 200px;
+      }
+
+      .display-info {
+        width: 60%;
+        text-align: center;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-weight: 400;
+        margin: 10px 0px 0px 0px;
+      }
+
+      .recipe-btn {
+        padding: 8px 15px;
+        border-radius: 15px;
+        border: none;
+        cursor: pointer;
+        background-color: #7ca0bc;
+        margin-top: 10px;
+      }
+
+      .recipe-btn:hover {
+        background-color: lightblue;
+        transition: all 150ms ease-in-out;
+        transform: scale(1.05);
+      }
+
+      footer {
+        text-align: center;
+        font-size: 12.5px;
+        color: rgb(0, 0, 0);
+        background-color: #7ca0bc;
+        border-radius: 15px;
+        padding: 10px 0px;
+        margin: 50px 0px 10px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main-page">
+        <h2>A Beloved Winter Tradition:</h2>
+        <h1>Baking Cookies Together</h1>
+        <p class="intro">
+          The subtle scent of vanilla, the richness of chocolate, and the warmth
+          of cinnamon and nutmeg define the winter season like no other. Whether
+          it's baking cookies for Santa, making gingerbread houses, or simply
+          enjoying a sweet treat with loved ones, baking cookies with the family
+          brings joy and comfort during the colder months.
+        </p>
+        <br />
+
+        <div class="set-btn-main">
+          <button class="btn-main">Learn More</button>
+          <button class="btn-main">Cookies</button>
+          <button class="btn-main">About</button>
+        </div>
+      </div>
+      <!-- main-page end -->
+      <br /><br />
+      <div class="content">
+        <div class="sidebar">
+          <button class="cookie">Gingerbread</button>
+          <button class="cookie">Sugar</button>
+          <button class="cookie">Chocolate</button>
+          <button class="cookie">Frosted</button>
+          <button class="cookie">Other</button>
+        </div>
+        <!-- sidebar end -->
+
+        <div class="display-area">
+          <img
+            class="display-img"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/210/original/isabela-kronemberger-bbkqplzRVJw-unsplash.jpg?1767811943"
+            alt="Selected Cookie Image"
+          />
+          <h3>Gingerbread Cookies</h3>
+          <p class="display-info">
+            Gingerbread cookies are a traditional favorite during the winter
+            season, often decorated with festive designs and served alongside
+            hot cocoa.
+          </p>
+          <button class="recipe-btn">Get Recipe</button>
+        </div>
+      </div>
+      <!-- content end -->
+
+      <footer>
+        <p>
+          Coded by
+          <a
+            href="https://www.shecodes.io/graduates/53357-diana-michelson"
+            target="_blank"
+            >Diana Michelson</a
+          >
+          for SheCodes Challenge 2026 "Beloved Winter Tradition"
+        </p>
+        <p>Available open source on <a href="#">GitHub</a></p>
+      </footer>
+    </div>
+    <!-- container end -->
+    <script></script>
+  </body>
+</html>

@@ -176,11 +176,31 @@
 
       .content {
         display: flex;
-        justify-content: center; /*to center display..*/
-        align-items: center; /*to center display..*/
-        margin: 20px 0px;
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
         gap: 20px;
-        padding: 0px 20px;
+        padding: 40px 30px;
+
+        width: 100%;
+        height: 100vh;
+
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/270/original/snow-8568544_1920.jpg?1767976897");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .content h2 {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-family: "Shrikhand", serif;
+        font-weight: 400;
+        font-size: 220%;
+        color: black;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
       }
 
       .cookie {
@@ -190,7 +210,8 @@
         cursor: pointer;
         border-radius: 8px;
         border: 2px solid white;
-        background-color: #b9d7ea;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         font-family: "Funnel Sans", sans-serif;
         font-weight: 600;
@@ -201,7 +222,7 @@
         margin-bottom: 10px;
       }
       .cookie:hover {
-        background-color: #769fcd;
+        background-color: #b9d7ea;
         transform: translateX(10px);
       }
 
@@ -225,7 +246,7 @@
       }
 
       .display-area {
-        flex: 0 1 500px;
+        flex: 0 1 400px;
         max-width: 600px;
         display: flex;
         flex-direction: column;
@@ -234,8 +255,8 @@
         border: 1px solid white;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         border-radius: 8px;
-        background-color: #b9d7ea;
-        padding: 0; /*to remove padding display..*/
+        background-color: #f7fbfc;
+        padding: 0;
         overflow: hidden;
       }
 
@@ -253,9 +274,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: #f7fbfc;
+
         font-family: "Funnel Sans", sans-serif;
-        padding: 10px 15px;
+        padding: 10px 10px 0px 10px;
         margin: 0px;
         width: 100%;
       }
@@ -280,15 +301,22 @@
         border-radius: 15px;
         border: 1px solid white;
         cursor: pointer;
-        background-color: #769fcd;
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/270/original/snow-8568544_1920.jpg?1767976897");
+        background-size: cover;
+        background-position: left;
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
         font-family: "Funnel Sans", sans-serif;
         font-weight: 500;
-        margin: 15px 0 10px 0;
+        margin: 0px 0 10px 0;
         transition: all 0.3s ease-in-out;
       }
 
       .recipe-btn:hover {
-        background-color: #f7fbfc;
+        background-image: none;
+        background-color: #b9d7ea;
+        color: black;
+        text-shadow: none;
         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
         transform: scale(1.05);
       }
@@ -296,7 +324,6 @@
       .banner-two {
         width: 100%;
         height: auto;
-        margin-top: 20px;
       }
 
       footer {
@@ -383,6 +410,7 @@
       </div>
 
       <div class="content">
+        <!-- <h2 class="content-title">Cookies</h2> -->
         <div class="sidebar">
           <button class="cookie">
             <img
@@ -448,6 +476,7 @@
           <button class="recipe-btn">Get Recipe</button>
         </div>
       </div>
+
       <!-- content end -->
 
       <div class="banner">

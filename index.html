@@ -18,6 +18,12 @@
 
     <title>Winter Tradition: Baking Cookies</title>
     <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
       body {
         background-color: #f7fbfc;
       }
@@ -26,18 +32,40 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/203/original/bob-canning-r53rNKb_7s8-unsplash.jpg?1767724154");
-        background-position: center;
-        background-size: cover;
-        border-radius: 15px;
-        margin: 0px 0px 5px 0px;
-        padding: 30px 20px 20px 20px;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0px;
+        padding: 0px;
+      }
+
+      .main-page img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .main-page-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 2;
+        max-width: 900px;
+        width: 90%;
+        text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+        padding: 20px;
       }
 
       .main-page h2 {
-        text-align: center;
         padding: 0px;
-        margin-bottom: 0px;
+        margin-bottom: 10px;
         font-family: "Imperial Script", cursive;
         font-weight: 400;
         font-style: normal;
@@ -46,7 +74,6 @@
       }
 
       .main-page h1 {
-        text-align: center;
         margin-top: 0px;
         margin-bottom: 50px;
         font-family: "Shrikhand", serif;
@@ -57,21 +84,26 @@
       }
 
       .intro {
-        align-content: right;
-        align-items: right;
         border-radius: 8px;
-        background-color: rgb(247, 251, 252, 0.5);
+        background-color: rgb(247, 251, 252, 0.3);
         font-weight: 450;
         font-family: "Funnel Sans", sans-serif;
+        font-size: 18px;
+        line-height: 1.4;
         text-shadow: 1px 0px 0px rgba(255, 255, 255, 0.2);
-        padding: 10px 30px;
-        margin: 0px 30px 20px 60px;
+        padding: 20px 30px;
+        margin: 0px 0px 20px 0px;
+        backdrop-filter: blur(10px);
       }
 
       .set-btn-main {
         display: flex;
         justify-content: space-around;
         align-items: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 25px;
+        margin-bottom: 0px;
       }
 
       .material-symbols-outlined {
@@ -81,19 +113,24 @@
       }
 
       .btn-main {
-        padding: 3px 8px;
-        border-radius: 15px;
-        border: none;
+        padding: 5px 10px;
+        border-radius: 25px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
         cursor: pointer;
         background-color: transparent;
         font-family: "Funnel Sans", sans-serif;
-        font-weight: 500;
+        font-weight: 600;
+        font-size: 15px;
+        display: inline-flex;
+        align-items: center;
       }
 
       .btn-main:hover {
         background-color: #f7fbfc;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease-in-out;
+        transform: translateY(-2px);
       }
 
       .banner {
@@ -140,6 +177,8 @@
       .content {
         display: flex;
         margin: 20px 0px;
+        gap: 20px;
+        padding: 0px 20px;
       }
 
       .cookie {
@@ -148,18 +187,19 @@
         align-items: center;
         cursor: pointer;
         border-radius: 7px;
-        border: 2px solid rgba(255, 255, 255, 1);
+        border: 2px solid white;
         background-color: #b9d7ea;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         font-family: "Funnel Sans", sans-serif;
         font-weight: 600;
         font-size: 15px;
-        block-size: 50px;
+        height: 50px;
         text-align: left;
+        transition: all 0.3s ease-in-out;
+        margin-bottom: 10px;
       }
       .cookie:hover {
         background-color: #769fcd;
-        transition: all 0.3s ease-in-out;
         transform: translateX(10px);
       }
 
@@ -177,22 +217,23 @@
         flex-direction: column;
         justify-content: center;
         align-items: left;
+        flex-shrink: 0;
         margin-left: 20px;
         padding: 0px 10px;
       }
 
       .display-area {
-        /*flex: 1;*/
+        flex: 0 1 500px;
+        max-width: 600px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        border: 1px solid rgba(255, 255, 255, 1);
+        border: 1px solid white;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         border-radius: 20px;
         background-color: #b9d7ea;
-        padding: 20px 0px;
-        margin: 0px 30px;
+        padding: 20px;
       }
 
       .display-img {
@@ -209,40 +250,41 @@
         background-color: #f7fbfc;
         font-family: "Funnel Sans", sans-serif;
         border-radius: 15px;
-        padding: 0px 0px 10px 0px;
-        margin: 15px 15px 0px 15px;
+        padding: 10px 15px;
+        margin: 15px 0px 0px 0px;
+        width: 100%;
       }
 
       .display-h3 {
         font-family: "Shrikhand", serif;
-        font-weight: lighter;
-        padding-bottom: 0px;
-        margin-bottom: 0px;
+        font-weight: 400;
+        margin: 10px 0;
       }
 
       .display-info {
-        width: 80%;
+        width: 90%;
         text-align: center;
         font-family: "Funnel Sans", sans-serif;
         font-weight: 400;
-        margin: 10px 0px 10px 0px;
+        line-height: 1.4;
+        margin: 10px 0px;
       }
 
       .recipe-btn {
         padding: 8px 15px;
         border-radius: 15px;
-        border: 1px solid rgba(255, 255, 255, 1);
+        border: 1px solid white;
         cursor: pointer;
         background-color: #769fcd;
         font-family: "Funnel Sans", sans-serif;
         font-weight: 500;
         margin-top: 10px;
+        transition: all 0.3s ease-in-out;
       }
 
       .recipe-btn:hover {
         background-color: #f7fbfc;
         box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-        transition: all 0.3s ease-in-out;
         transform: scale(1.05);
       }
 
@@ -258,9 +300,7 @@
         font-family: "monospace", monospace;
         color: rgb(0, 0, 0);
         background-color: #769fcd;
-        border-radius: 15px;
         padding: 10px 0px;
-        margin: 0px 0px 10px 0px;
       }
 
       a {
@@ -277,27 +317,35 @@
   <body>
     <div class="container">
       <div class="main-page">
-        <h2>A Beloved Winter Tradition:</h2>
-        <h1>Baking Cookies Together</h1>
-        <p class="intro">
-          The subtle scent of vanilla, the richness of chocolate, and the warmth
-          of cinnamon and nutmeg define the winter season like no other. Whether
-          it's baking cookies for Santa, making gingerbread houses, or simply
-          enjoying a sweet treat with loved ones, baking cookies with the family
-          brings joy and comfort during the colder months.
-        </p>
-        <br />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/203/original/bob-canning-r53rNKb_7s8-unsplash.jpg?1767724154"
+          alt="snowy winter background"
+        />
+        <div class="main-page-content">
+          <h2>A Beloved Winter Tradition:</h2>
+          <h1>Baking Cookies Together</h1>
+          <p class="intro">
+            The subtle scent of vanilla, the richness of chocolate, and the
+            warmth of cinnamon and nutmeg define the winter season like no
+            other. Whether it's baking cookies for Santa, making gingerbread
+            houses, or simply enjoying a sweet treat with loved ones, baking
+            cookies with the family brings joy and comfort during the colder
+            months.
+          </p>
+          <br />
 
-        <div class="set-btn-main">
-          <button class="btn-main">
-            <span class="material-symbols-outlined"> chef_hat </span>Learn More
-          </button>
-          <button class="btn-main">
-            <span class="material-symbols-outlined"> cookie </span>Cookies
-          </button>
-          <button class="btn-main">
-            <span class="material-symbols-outlined">oven_gen</span>About
-          </button>
+          <div class="set-btn-main">
+            <button class="btn-main">
+              <span class="material-symbols-outlined"> chef_hat </span>Learn
+              More
+            </button>
+            <button class="btn-main">
+              <span class="material-symbols-outlined"> cookie </span>Cookies
+            </button>
+            <button class="btn-main">
+              <span class="material-symbols-outlined">oven_gen</span>About
+            </button>
+          </div>
         </div>
       </div>
       <!-- main-page end -->
@@ -312,6 +360,21 @@
           <h1>“The sweetest memories are made in the kitchen.”</h1>
           <h3>— Unknown</h3>
         </div>
+      </div>
+      <!-- banner end -->
+
+      <div class="learn-more">
+        <h2>Learn More About Baking Cookies</h2>
+        <p>
+          Mixing ingredients, rolling out dough, and decorating with colorful
+          frosting. Baking cookies is more than just a culinary activity; it's a
+          way to create lasting memories with family and friends. Each cookie
+          baked and shared carries the warmth of the holidays and the comfort of
+          winter. Whether you prefer classic chocolate chip, festive sugar
+          cookies, or spiced gingerbread, there is a cookie for everyone.
+          Consider baking a batch this season to fill the hearts (and stomachs)
+          of your loved ones with happiness!
+        </p>
       </div>
 
       <div class="content">

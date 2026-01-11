@@ -50,6 +50,29 @@
         left: 0;
       }
 
+      .change-theme-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 3;
+        padding: 5px 10px;
+        border-radius: 25px;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(10px);
+        cursor: pointer;
+        background-color: transparent;
+        font-family: "Funnel Sans", sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+      }
+
+      .change-theme-button:hover {
+        background-color: #f7fbfc;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease-in-out;
+        transform: translateY(2px);
+      }
+
       .main-page-content {
         position: absolute;
         top: 50%;
@@ -151,6 +174,12 @@
         opacity: 0.5;
       }
 
+      .dark .banner-one {
+        opacity: 1;
+        filter: grayscale(50%);
+        filter: brightness(60%);
+      }
+
       .banner-txt {
         position: absolute;
         top: 50%;
@@ -159,6 +188,11 @@
         text-align: center;
         font-size: 100%;
         text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+      }
+
+      .dark .banner-txt {
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       }
 
       .banner-txt h1 {
@@ -172,6 +206,42 @@
         font-weight: 400;
         margin: 0px;
         font-size: 150%;
+      }
+
+      .learn-more {
+        padding: 40px 20px 20px 20px;
+        width: 100%;
+        height: 300px;
+        text-align: center;
+        margin: 0 auto;
+        color: white;
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/202/original/nathan-fertig-scbYOgVyb8Q-unsplash.jpg?1767723995");
+        background-size: cover;
+        background-position: bottom;
+        background-repeat: no-repeat;
+      }
+
+      .dark .learn-more {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/355/original/pexels-teagan-hunt-599956189-30118810.jpg?1768160345");
+      }
+
+      .learn-more h2 {
+        font-family: "Shrikhand", serif;
+        font-weight: 100;
+        font-size: 200%;
+        margin-bottom: 20px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+      }
+
+      .learn-more p {
+        font-family: "Funnel Sans", sans-serif;
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 1.4;
+        backdrop-filter: blur(3px);
+        padding: 10px 10px;
+        border-radius: 8px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
       }
 
       .content {
@@ -191,16 +261,9 @@
         background-repeat: no-repeat;
       }
 
-      .content h2 {
-        position: absolute;
-        top: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        font-family: "Shrikhand", serif;
-        font-weight: 400;
-        font-size: 220%;
-        color: black;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+      .dark .content {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/202/original/nathan-fertig-scbYOgVyb8Q-unsplash.jpg?1767723995");
+        background-position: center;
       }
 
       .cookie {
@@ -224,6 +287,14 @@
       .cookie:hover {
         background-color: #b9d7ea;
         transform: translateX(10px);
+      }
+
+      .dark .cookie {
+        color: white;
+      }
+
+      .dark .cookie:hover {
+        background-color: #6386ae;
       }
 
       .button-icon {
@@ -258,6 +329,11 @@
         background-color: #f7fbfc;
         padding: 0;
         overflow: hidden;
+      }
+
+      .dark .display-area {
+        background-color: #2f2d21;
+        color: white;
       }
 
       .display-img {
@@ -321,9 +397,24 @@
         transform: scale(1.05);
       }
 
+      .dark .recipe-btn {
+        background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/202/original/nathan-fertig-scbYOgVyb8Q-unsplash.jpg?1767723995");
+      }
+
+      .dark .recipe-btn:hover {
+        background-image: none;
+        background-color: #6386ae;
+        color: white;
+      }
+
       .banner-two {
         width: 100%;
         height: auto;
+      }
+
+      .dark .banner-two {
+        filter: grayscale(50%);
+        filter: brightness(60%);
       }
 
       footer {
@@ -335,6 +426,22 @@
         padding: 10px 0px;
       }
 
+      .dark footer {
+        background-color: #6386ae;
+      }
+
+      footer h3 {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: white;
+        text-shadow: 1px 1px 1px rgb(0, 0, 0, 0.7);
+      }
+
+      .dark footer h3 {
+        color: black;
+        text-shadow: 1px 1px 1px rgb(255, 255, 255, 0.7);
+      }
+
       a {
         color: #d6e6f2;
         text-decoration: none;
@@ -343,6 +450,47 @@
 
       a:hover {
         text-decoration: underline;
+      }
+
+      .scroll-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+
+        padding: 5px 15px;
+        background-color: #769fcd;
+        color: white;
+        border: solid 2px #769fcd;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 22px;
+        font-weight: 900;
+        text-shadow: 1px 0px 0px white;
+        box-shadow: 1px 1px 1px rgb(0, 0, 0, 0.7);
+        transition: all 0.2s ease-in-out;
+      }
+
+      .scroll-top:hover {
+        background-color: #f7fbfc;
+        color: black;
+        border: solid 2px #f7fbfc;
+        text-shadow: 1px 0px 0px black;
+        box-shadow: 0px 1px 0px rgb(0, 0, 0, 0.5);
+        transform: translateY(2px);
+      }
+
+      .dark .scroll-top {
+        background-color: #6386ae;
+        border: solid 2px #6386ae;
+      }
+
+      .dark .scroll-top:hover {
+        background-color: #f7fbfc;
+        color: black;
+        border: solid 2px #f7fbfc;
+        text-shadow: 1px 0px 0px black;
+        box-shadow: 0px 1px 0px rgb(0, 0, 0, 0.5);
       }
     </style>
   </head>
@@ -353,6 +501,7 @@
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/203/original/bob-canning-r53rNKb_7s8-unsplash.jpg?1767724154"
           alt="snowy winter background"
         />
+        <button class="change-theme-button">Change Theme</button>
         <div class="main-page-content">
           <h2>A Beloved Winter Tradition:</h2>
           <h1>Baking Cookies Together</h1>
@@ -396,7 +545,7 @@
       <!-- banner end -->
 
       <div class="learn-more">
-        <h2>Learn More About Baking Cookies</h2>
+        <h2>... Learn More ...</h2>
         <p>
           Mixing ingredients, rolling out dough, and decorating with colorful
           frosting. Baking cookies is more than just a culinary activity; it's a
@@ -404,13 +553,12 @@
           baked and shared carries the warmth of the holidays and the comfort of
           winter. Whether you prefer classic chocolate chip, festive sugar
           cookies, or spiced gingerbread, there is a cookie for everyone.
-          Consider baking a batch this season to fill the hearts (and stomachs)
-          of your loved ones with happiness!
+          Consider baking a batch of the cookies below to fill the hearts (and
+          stomachs) of your loved ones this season!
         </p>
       </div>
 
       <div class="content">
-        <!-- <h2 class="content-title">Cookies</h2> -->
         <div class="sidebar">
           <button class="cookie">
             <img
@@ -472,6 +620,10 @@
               season, often decorated with festive designs and served alongside
               hot cocoa.
             </p>
+            <!-- <div class="navigation">
+              <button class="prev-btn">Previous</button>
+              <button class="next-btn">Next</button>
+            </div> -->
           </div>
           <button class="recipe-btn">Get Recipe</button>
         </div>
@@ -488,6 +640,7 @@
       </div>
 
       <footer>
+        <h3>... About ...</h3>
         <p>
           Coded by
           <a
@@ -506,6 +659,45 @@
       </footer>
     </div>
     <!-- container end -->
-    <script></script>
+    <button class="scroll-top">↑</button>
+
+    <script>
+      //get the button
+      const scrollToTopBtn = document.querySelector(".scroll-top");
+
+      //show button when scrolling
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          scrollToTopBtn.style.display = "block";
+        } else {
+          scrollToTopBtn.style.display = "none";
+        }
+      };
+
+      //scroll up when clicked
+      scrollToTopBtn.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+
+      //change theme button
+      function changeTheme() {
+        let body = document.querySelector("body");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
+      }
+
+      let themeBtn = document.querySelector(".change-theme-button");
+      themeBtn.addEventListener("click", changeTheme);
+    </script>
   </body>
 </html>

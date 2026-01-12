@@ -330,12 +330,18 @@
         transform: translateX(10px);
       }
 
+      .cookie.active {
+        background-color: #6386ae;
+        border-color: #b9d7ea;
+        color: white;
+      }
+
       .dark .cookie {
         color: white;
       }
 
       .dark .cookie:hover {
-        background-color: #6386ae;
+        background-color: #b9d7ea;
       }
 
       .button-icon {
@@ -558,14 +564,14 @@
           <br />
 
           <div class="set-btn-main">
-            <button class="btn-main">
+            <button class="btn-main learn-more-btn">
               <span class="material-symbols-outlined"> chef_hat </span>Learn
               More
             </button>
-            <button class="btn-main">
+            <button class="btn-main cookies-btn">
               <span class="material-symbols-outlined"> cookie </span>Cookies
             </button>
-            <button class="btn-main">
+            <button class="btn-main about-btn">
               <span class="material-symbols-outlined">oven_gen</span>About
             </button>
           </div>
@@ -573,17 +579,20 @@
       </div>
       <!-- main-page end -->
 
-      <div class="banner">
-        <img
-          class="banner-one"
-          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/250/original/cookie-1864642_1920.jpg?1767915363"
-          alt="Banner Image"
-        />
-        <div class="banner-txt">
-          <h1>“The sweetest memories are made in the kitchen.”</h1>
-          <h3>— Unknown</h3>
+      <section id="learn-more-section">
+        <div class="banner">
+          <img
+            class="banner-one"
+            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/250/original/cookie-1864642_1920.jpg?1767915363"
+            alt="Banner Image"
+          />
+          <div class="banner-txt">
+            <h1>“The sweetest memories are made in the kitchen.”</h1>
+            <h3>— Unknown</h3>
+          </div>
         </div>
-      </div>
+      </section>
+      <!--ending learn more section HERE-->
       <!-- banner end -->
 
       <div class="learn-more">
@@ -600,78 +609,77 @@
         </p>
       </div>
 
-      <div class="content">
-        <div class="sidebar">
-          <button class="cookie">
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/253/original/isabela-kronemberger-bbkqplzRVJw-unsplash.jpg?1767926443"
-              class="button-icon"
-              alt="gingerbread"
-            />
-            Gingerbread
-          </button>
+      <section id="cookies-section">
+        <div class="content">
+          <div class="sidebar">
+            <button class="cookie active" onclick="showCookie(0)">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/253/original/isabela-kronemberger-bbkqplzRVJw-unsplash.jpg?1767926443"
+                class="button-icon"
+                alt="gingerbread"
+              />
+              Gingerbread
+            </button>
 
-          <button class="cookie">
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/256/original/pexels-laura-james-6102136.jpg?1767928083"
-              class="button-icon"
-              alt="sugar"
-            />
-            Sugar
-          </button>
+            <button class="cookie" onclick="showCookie(1)">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/256/original/pexels-laura-james-6102136.jpg?1767928083"
+                class="button-icon"
+                alt="sugar"
+              />
+              Sugar
+            </button>
 
-          <button class="cookie">
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/254/original/rumeysa-aydin-rjf4FcmERGc-unsplash-cropped.jpg?1767927095"
-              class="button-icon"
-              alt="chocolate"
-            />
-            Chocolate
-          </button>
+            <button class="cookie" onclick="showCookie(2)">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/254/original/rumeysa-aydin-rjf4FcmERGc-unsplash-cropped.jpg?1767927095"
+                class="button-icon"
+                alt="chocolate"
+              />
+              Chocolate
+            </button>
 
-          <button class="cookie">
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/257/original/pexels-rdne-6518682-cropped.jpg?1767929998"
-              class="button-icon"
-              alt="frosted"
-            />
-            Frosted
-          </button>
+            <button class="cookie" onclick="showCookie(3)">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/257/original/pexels-rdne-6518682-cropped.jpg?1767929998"
+                class="button-icon"
+                alt="frosted"
+              />
+              Frosted
+            </button>
 
-          <button class="cookie">
-            <img
-              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/255/original/madison-kaminski-2c6_d8svbkY-unsplash-cropped.jpg?1767927224"
-              class="button-icon"
-              alt="peanut butter"
-            />
-            Peanut Butter
-          </button>
-        </div>
-        <!-- sidebar end -->
-
-        <div class="display-area">
-          <img
-            class="display-img"
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/210/original/isabela-kronemberger-bbkqplzRVJw-unsplash.jpg?1767811943"
-            alt="Selected Cookie Image"
-          />
-          <div class="display-text-content">
-            <h3 class="display-h3">Gingerbread</h3>
-            <p class="display-info">
-              Gingerbread cookies are a traditional favorite during the winter
-              season, often decorated with festive designs and served alongside
-              hot cocoa.
-            </p>
-            <!-- <div class="navigation">
-              <button class="prev-btn">Previous</button>
-              <button class="next-btn">Next</button>
-            </div> -->
+            <button class="cookie" onclick="showCookie(4)">
+              <img
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/255/original/madison-kaminski-2c6_d8svbkY-unsplash-cropped.jpg?1767927224"
+                class="button-icon"
+                alt="peanut butter"
+              />
+              Peanut Butter
+            </button>
           </div>
-          <button class="recipe-btn">Get Recipe</button>
-        </div>
-      </div>
+          <!-- sidebar end -->
 
+          <div class="display-area">
+            <img
+              id="cookieImage"
+              class="display-img"
+              src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/210/original/isabela-kronemberger-bbkqplzRVJw-unsplash.jpg?1767811943"
+              alt="Selected Cookie Image"
+            />
+            <div class="display-text-content">
+              <h3 id="cookieName" class="display-h3">Gingerbread</h3>
+              <p id="cookieDescription" class="display-info">
+                Gingerbread cookies are a traditional favorite during the winter
+                season, often decorated with festive designs and served
+                alongside hot cocoa.
+              </p>
+            </div>
+            <button id="cookieRecipe" class="recipe-btn">Get Recipe</button>
+          </div>
+        </div>
+      </section>
       <!-- content end -->
+      <!--cookies section END-->
 
       <div class="banner">
         <img
@@ -681,24 +689,27 @@
         />
       </div>
 
-      <footer>
-        <h3>... About ...</h3>
-        <p>
-          Coded by
-          <a
-            href="https://www.shecodes.io/graduates/53357-diana-michelson"
-            target="_blank"
-            >Diana Michelson</a
-          >
-          for SheCodes Challenge 2026 "Beloved Winter Tradition"
-        </p>
-        <p>
-          Available open source on
-          <a href="https://github.com/diana-mich/winter-tradition-challenge"
-            >GitHub</a
-          >
-        </p>
-      </footer>
+      <section id="about-section">
+        <footer>
+          <h3>... About ...</h3>
+          <p>
+            Coded by
+            <a
+              href="https://www.shecodes.io/graduates/53357-diana-michelson"
+              target="_blank"
+              >Diana Michelson</a
+            >
+            for SheCodes Challenge 2026 "Beloved Winter Tradition"
+          </p>
+          <p>
+            Available open source on
+            <a href="https://github.com/diana-mich/winter-tradition-challenge"
+              >GitHub</a
+            >
+          </p>
+        </footer>
+      </section>
+      <!--about section END-->
     </div>
     <!-- container end -->
     <button class="scroll-top">↑</button>
@@ -740,6 +751,94 @@
 
       let themeBtn = document.querySelector(".change-theme-button");
       themeBtn.addEventListener("click", changeTheme);
+
+      //main buttons sections navigation
+      const learnMoreBtn = document.querySelector(".learn-more-btn");
+      const cookiesBtn = document.querySelector(".cookies-btn");
+      const aboutBtn = document.querySelector(".about-btn");
+
+      learnMoreBtn.addEventListener("click", () => {
+        document
+          .getElementById("learn-more-section")
+          .scrollIntoView({ behavior: "smooth" });
+      });
+
+      cookiesBtn.addEventListener("click", () => {
+        document
+          .getElementById("cookies-section")
+          .scrollIntoView({ behavior: "smooth" });
+      });
+
+      aboutBtn.addEventListener("click", () => {
+        document
+          .getElementById("about-section")
+          .scrollIntoView({ behavior: "smooth" });
+      });
+
+      //Cookie selection
+      const cookies = [
+        {
+          name: "Gingerbread",
+          image:
+            "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/210/original/isabela-kronemberger-bbkqplzRVJw-unsplash.jpg?1767811943",
+          description:
+            "Gingerbread cookies are a traditional favorite during the winter season, often decorated with festive designs and served alongside hot cocoa.",
+          recipe:
+            "https://www.allrecipes.com/recipe/56673/gingerbread-cookies/",
+        },
+        {
+          name: "Sugar",
+          image:
+            "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/361/original/pexels-laura-james-6102106.jpg?1768183927",
+          description:
+            "Sugar cookies are a classic favorite, they're fun to decorate for any ocassion year-round, and are delicious with or without icing.",
+          recipe: "https://www.allrecipes.com/recipe/9870/easy-sugar-cookies/",
+        },
+        {
+          name: "Chocolate",
+          image:
+            "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/362/original/rumeysa-aydin-rjf4FcmERGc-unsplash.jpg?1768184022",
+          description:
+            "You can never go wrong with chocolate chip cookies! Whether for yourself, a loved one, or Santa, these are a staple for any baker.",
+          recipe:
+            "https://www.allrecipes.com/recipe/10909/annas-chocolate-chip-cookies/",
+        },
+        {
+          name: "Frosted",
+          image:
+            "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/363/original/pexels-rdne-6518682.jpg?1768184137",
+          description:
+            "These cookies are known for being super soft, sweet, thick, and for their rich layer of colorful frosting. ",
+          recipe:
+            "https://www.allrecipes.com/recipe/229804/soft-frosted-sugar-cookies/",
+        },
+        {
+          name: "Peanut Butter",
+          image:
+            "https://s3.amazonaws.com/shecodesio-production/uploads/files/000/177/364/original/madison-kaminski-2c6_d8svbkY-unsplash.jpg?1768184186",
+          description:
+            "Perfect for peanut butter lovers. They're chewy with a gooey chocolate center, a treat for any occasion.",
+          recipe:
+            "https://www.allrecipes.com/recipe/268137/my-best-peanut-butter-blossoms/",
+        },
+      ];
+
+      let currentIndex = 0;
+      function showCookie(index) {
+        currentIndex = index;
+        const cookie = cookies[index];
+
+        document.getElementById("cookieImage").src = cookie.image;
+        document.getElementById("cookieName").textContent = cookie.name;
+        document.getElementById("cookieDescription").textContent =
+          cookie.description;
+        document.getElementById("cookieRecipe").href = cookie.recipe;
+
+        const buttons = document.querySelectorAll(".cookie");
+        buttons.forEach((btn, i) => {
+          btn.classList.toggle("active", i == index);
+        });
+      }
     </script>
   </body>
 </html>
